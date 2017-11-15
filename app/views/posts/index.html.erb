@@ -26,7 +26,7 @@
               </button>
               <% end %>
        </h3>
-      <%= time_ago_in_words(post.created_at)%> temu przez <%= post.user_id%>
+    Dodane przez <%= post.user.email%>
       <br>
       <% if can? :update, post %>
         <%= link_to 'Edytuj', edit_post_path(post) %>
