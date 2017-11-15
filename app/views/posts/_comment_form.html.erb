@@ -1,0 +1,5 @@
+<p>Dodaj komentarz</p>
+<%= form_for ([@post, @post.comments.build]) do |f| %>
+  <%= f.text_area :content %>
+  <%= submit_tag "DODAJ" %>
+<% end %>

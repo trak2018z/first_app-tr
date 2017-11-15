@@ -1,0 +1,6 @@
+<p> <%=  comment.content %> </p>
+<p> <%=  comment.user.email %> </p>
+
+<% if can? :destroy, comment%>
+<%= link_to 'Usuń', post_comment_path(comment.post_id, comment), method: :delete%>
+<% end %>
